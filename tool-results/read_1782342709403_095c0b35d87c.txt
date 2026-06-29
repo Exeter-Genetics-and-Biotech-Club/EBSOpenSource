@@ -1,0 +1,568 @@
+     1→'use client';
+     2→
+     3→import { tracks, type Track, type Unit, type Lesson, type Exercise, type ExerciseType, type FinalProject } from '@/lib/curriculum-data';
+     4→import { useState, useEffect, useCallback } from 'react';
+     5→
+     6→const STORAGE_KEY = 'ebsopensource_progress';
+     7→
+     8→interface ProgressState {
+     9→  xp: number;
+    10→  streak: number;
+    11→  lastActiveDate: string;
+    12→  completedExercises: string[];
+    13→  completedLessons: string[];
+    14→  currentTrack: string;
+    15→}
+    16→
+    17→function getInitialProgress(): ProgressState {
+    18→  const base: ProgressState = { xp: 0, streak: 0, lastActiveDate: '', completedExercises: [], completedLessons: [], currentTrack: 'r' };
+    19→  if (typeof window === 'undefined') return base;
+    20→  const raw = localStorage.getItem(STORAGE_KEY);
+    21→  if (raw) {
+    22→    try {
+    23→      const parsed = JSON.parse(raw) as ProgressState;
+    24→      const today = new Date().toISOString().slice(0, 10);
+    25→      const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    26→      if (parsed.lastActiveDate !== today) {
+    27→        parsed.streak = parsed.lastActiveDate === yesterday ? parsed.streak + 1 : 1;
+    28→        parsed.lastActiveDate = today;
+    29→      }
+    30→      return parsed;
+    31→    } catch { /* ignore */ }
+    32→  }
+    33→  return base;
+    34→}
+    35→
+    36→function saveProgress(p: ProgressState) { localStorage.setItem(STORAGE_KEY, JSON.stringify(p)); }
+    37→
+    38→function getLessonProgress(lessonId: string, completedExercises: string[]): number {
+    39→  const lesson = tracks.flatMap(t => t.units).flatMap(u => u.lessons).find(l => l.id === lessonId);
+    40→  if (!lesson) return 0;
+    41→  const done = lesson.exercises.filter(e => completedExercises.includes(e.id)).length;
+    42→  return Math.round((done / lesson.exercises.length) * 100);
+    43→}
+    44→
+    45→function getUnitProgress(unit: Unit, completedExercises: string[]): number {
+    46→  const total = unit.lessons.reduce((s, l) => s + l.exercises.length, 0);
+    47→  const done = unit.lessons.reduce((s, l) => s + l.exercises.filter(e => completedExercises.includes(e.id)).length, 0);
+    48→  return total === 0 ? 0 : Math.round((done / total) * 100);
+    49→}
+    50→
+    51→// ============================================================
+    52→// Main Page
+    53→// ============================================================
+    54→export default function Home() {
+    55→  const [progress, setProgress] = useState<ProgressState>(getInitialProgress);
+    56→  const [currentTrack, setCurrentTrack] = useState<string>(progress.currentTrack || 'r');
+    57→  const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
+    58→  const [activeExerciseIdx, setActiveExerciseIdx] = useState(0);
+    59→  const [phase, setPhase] = useState<'intro' | 'teaching' | 'quiz' | 'result' | 'finalproject'>('intro');
+    60→  const [activeFinalProject, setActiveFinalProject] = useState<FinalProject | null>(null);
+    61→  const [showXPAnimation, setShowXPAnimation] = useState(false);
+    62→  const [earnedXP, setEarnedXP] = useState(0);
+    63→
+    64→  const track = tracks.find(t => t.id === currentTrack)!;
+    65→
+    66→  useEffect(() => { saveProgress(progress); }, [progress]);
+    67→
+    68→  const handleAnswer = useCallback((exercise: Exercise, answer: string | number) => {
+    69→    const isCorrect = String(answer).toLowerCase().trim() === String(exercise.correctAnswer).toLowerCase().trim();
+    70→    if (isCorrect) {
+    71→      const xpGain = activeLesson?.xpReward || 10;
+    72→      setEarnedXP(xpGain);
+    73→      setShowXPAnimation(true);
+    74→      setTimeout(() => setShowXPAnimation(false), 1500);
+    75→      setProgress(p => ({ ...p, xp: p.xp + xpGain, completedExercises: [...new Set([...p.completedExercises, exercise.id])] }));
+    76→    }
+    77→    return isCorrect;
+    78→  }, [activeLesson]);
+    79→
+    80→  const checkLessonComplete = useCallback((lesson: Lesson) => {
+    81→    const allDone = lesson.exercises.every(e => progress.completedExercises.includes(e.id));
+    82→    if (allDone && !progress.completedLessons.includes(lesson.id)) {
+    83→      setProgress(p => ({ ...p, completedLessons: [...new Set([...p.completedLessons, lesson.id])] }));
+    84→    }
+    85→  }, [progress.completedExercises, progress.completedLessons]);
+    86→
+    87→  // ── FINAL PROJECT DETAIL VIEW ─────────────────────────
+    88→  if (phase === 'finalproject' && activeFinalProject) {
+    89→    return (
+    90→      <div className="min-h-screen bg-background flex flex-col">
+    91→        <header className="sticky top-0 z-50 bg-[#0a0a0a] text-white">
+    92→          <div className="max-w-[1140px] mx-auto flex items-center justify-between px-5 py-2.5">
+    93→            <button
+    94→              onClick={() => { setActiveFinalProject(null); setPhase('intro'); setActiveLesson(null); }}
+    95→              className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium transition-colors"
+    96→            >
+    97→              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    98→              ← Back to Curriculum
+    99→            </button>
+   100→          </div>
+   101→        </header>
+   102→        <div className="h-0.5 bg-[#A31F34]" />
+   103→
+   104→        <main className="flex-1 max-w-[1140px] mx-auto w-full px-5 py-8">
+   105→          <div className="max-w-2xl mx-auto space-y-6">
+   106→            <div className="pt-4">
+   107→              <div className="flex items-center gap-2 mb-2">
+   108→                <span className="text-[10px] uppercase tracking-widest font-semibold text-[#A31F34]">Final Project</span>
+   109→                <span className="text-[10px] font-bold text-[#A31F34] bg-[#A31F34]/10 px-2 py-0.5 rounded-full">+{activeFinalProject.xpReward} XP</span>
+   110→              </div>
+   111→              <h1 className="text-2xl font-bold text-foreground tracking-tight">{activeFinalProject.title}</h1>
+   112→            </div>
+   113→
+   114→            {/* Scenario */}
+   115→            <div className="border border-border rounded-lg p-6">
+   116→              <h2 className="font-bold text-foreground text-sm mb-2">Scenario</h2>
+   117→              <p className="text-muted-foreground leading-7">{activeFinalProject.scenario}</p>
+   118→            </div>
+   119→
+   120→            {/* Tasks */}
+   121→            <div className="border border-border rounded-lg p-6">
+   122→              <h2 className="font-bold text-foreground text-sm mb-3">Your Tasks</h2>
+   123→              <ol className="space-y-2">
+   124→                {activeFinalProject.tasks.map((task, i) => (
+   125→                  <li key={i} className="flex gap-2 text-sm text-foreground">
+   126→                    <span className="font-bold text-[#A31F34] flex-shrink-0">{i + 1}.</span>
+   127→                    <span>{task}</span>
+   128→                  </li>
+   129→                ))}
+   130→              </ol>
+   131→            </div>
+   132→
+   133→            {/* Deliverables */}
+   134→            <div className="border border-border rounded-lg p-6">
+   135→              <h2 className="font-bold text-foreground text-sm mb-3">Deliverables</h2>
+   136→              <ul className="space-y-1.5">
+   137→                {activeFinalProject.deliverables.map((d, i) => (
+   138→                  <li key={i} className="flex gap-2 text-sm text-muted-foreground">
+   139→                    <span className="text-[#A31F34]">●</span>
+   140→                    <span>{d}</span>
+   141→                  </li>
+   142→                ))}
+   143→              </ul>
+   144→            </div>
+   145→
+   146→            {/* Skills */}
+   147→            <div>
+   148→              <h2 className="font-bold text-foreground text-sm mb-2">Skills You Will Use</h2>
+   149→              <div className="flex flex-wrap gap-2">
+   150→                {activeFinalProject.skills.map((s, i) => (
+   151→                  <span key={i} className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground">{s}</span>
+   152→                ))}
+   153→              </div>
+   154→            </div>
+   155→
+   156→            {/* Starter Code */}
+   157→            {activeFinalProject.starterCode && (
+   158→              <div className="border border-border rounded-lg overflow-hidden">
+   159→                <div className="bg-[#A31F34] px-4 py-2">
+   160→                  <span className="text-white text-xs font-semibold">Starter Code</span>
+   161→                </div>
+   162→                <pre className="bg-[#0a0a0a] text-[#e2697d] p-4 text-sm font-mono overflow-x-auto leading-6">
+   163→                  {activeFinalProject.starterCode}
+   164→                </pre>
+   165→              </div>
+   166→            )}
+   167→
+   168→            <button
+   169→              onClick={() => { setActiveFinalProject(null); setPhase('intro'); setActiveLesson(null); }}
+   170→              className="w-full py-3.5 rounded-lg font-semibold text-base bg-[#0a0a0a] text-white hover:bg-[#1a1a1a] active:scale-[0.99] transition-all"
+   171→            >
+   172→              ← Back to Curriculum
+   173→            </button>
+   174→          </div>
+   175→        </main>
+   176→      </div>
+   177→    );
+   178→  }
+   179→
+   180→  // ── LESSON VIEW ──────────────────────────────────────
+   181→  if (activeLesson) {
+   182→    const exercises = activeLesson.exercises;
+   183→    const currentEx = exercises[activeExerciseIdx];
+   184→    const completedInLesson = exercises.filter(e => progress.completedExercises.includes(e.id)).length;
+   185→    const progressPct = Math.round((completedInLesson / exercises.length) * 100);
+   186→
+   187→    return (
+   188→      <div className="min-h-screen bg-background flex flex-col">
+   189→        {/* MIT-style top bar */}
+   190→        <header className="sticky top-0 z-50 bg-[#0a0a0a] text-white">
+   191→          <div className="max-w-[1140px] mx-auto flex items-center justify-between px-5 py-2.5">
+   192→            <button
+   193→              onClick={() => { setActiveLesson(null); setActiveExerciseIdx(0); setPhase('intro'); }}
+   194→              className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium transition-colors"
+   195→            >
+   196→              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+   197→              Back
+   198→            </button>
+   199→            <div className="flex-1 mx-6">
+   200→              <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+   201→                <div className="h-full bg-[#A31F34] rounded-full transition-all duration-500" style={{ width: `${progressPct}%` }} />
+   202→              </div>
+   203→            </div>
+   204→            <span className="text-xs font-semibold text-white/50">{completedInLesson}/{exercises.length}</span>
+   205→          </div>
+   206→        </header>
+   207→        {/* Red accent line */}
+   208→        <div className="h-0.5 bg-[#A31F34]" />
+   209→
+   210→        <main className="flex-1 max-w-[1140px] mx-auto w-full px-5 py-8">
+   211→          {phase === 'intro' && (
+   212→            <div className="max-w-2xl mx-auto space-y-8">
+   213→              <div className="text-center space-y-4 pt-4">
+   214→                <h1 className="text-3xl font-bold text-foreground tracking-tight">{activeLesson.title}</h1>
+   215→                <p className="text-muted-foreground text-lg">{activeLesson.description}</p>
+   216→              </div>
+   217→              <div className="border border-border rounded-lg p-6 space-y-4">
+   218→                <p className="text-foreground leading-7">{activeLesson.intro}</p>
+   219→                {activeLesson.introCode && (
+   220→                  <pre className="bg-[#0a0a0a] text-[#e2697d] rounded-lg p-4 text-sm font-mono overflow-x-auto leading-6">
+   221→                    {activeLesson.introCode}
+   222→                  </pre>
+   223→                )}
+   224→              </div>
+   225→              <button
+   226→                onClick={() => setPhase('teaching')}
+   227→                className="w-full py-3.5 rounded-lg font-semibold text-base bg-[#A31F34] text-white hover:bg-[#8B1A2C] active:scale-[0.99] transition-all"
+   228→              >
+   229→                Start Learning →
+   230→              </button>
+   231→            </div>
+   232→          )}
+   233→
+   234→          {phase === 'teaching' && currentEx && (
+   235→            <div className="max-w-2xl mx-auto space-y-6">
+   236→              <div className="flex items-center gap-2">
+   237→                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#A31F34] text-xs font-bold text-white">
+   238→                  {activeExerciseIdx + 1}
+   239→                </span>
+   240→                <span className="uppercase tracking-widest font-semibold text-[11px] text-muted-foreground">Learn this concept</span>
+   241→              </div>
+   242→              <div className="border border-border rounded-lg p-6 space-y-4">
+   243→                <p className="text-foreground leading-7 text-[15px]">{currentEx.teaching}</p>
+   244→                {currentEx.teachingCode && (
+   245→                  <pre className="bg-[#0a0a0a] text-[#e2697d] rounded-lg p-4 text-sm font-mono overflow-x-auto leading-6">
+   246→                    {currentEx.teachingCode}
+   247→                  </pre>
+   248→                )}
+   249→              </div>
+   250→              <button
+   251→                onClick={() => setPhase('quiz')}
+   252→                className="w-full py-3.5 rounded-lg font-semibold text-base bg-[#A31F34] text-white hover:bg-[#8B1A2C] active:scale-[0.99] transition-all"
+   253→              >
+   254→                Let&apos;s Practice →
+   255→              </button>
+   256→            </div>
+   257→          )}
+   258→
+   259→          {phase === 'quiz' && currentEx && (
+   260→            <div className="max-w-2xl mx-auto">
+   261→              <ExerciseCard key={currentEx.id} exercise={currentEx} lesson={activeLesson}
+   262→                isCompleted={progress.completedExercises.includes(currentEx.id)}
+   263→                onAnswer={(answer) => { const correct = handleAnswer(currentEx, answer); setPhase('result'); if (correct) checkLessonComplete(activeLesson); }}
+   264→              />
+   265→            </div>
+   266→          )}
+   267→
+   268→          {phase === 'result' && currentEx && (
+   269→            <div className="max-w-2xl mx-auto">
+   270→              <ResultCard exercise={currentEx} lesson={activeLesson} isCompleted={progress.completedExercises.includes(currentEx.id)}
+   271→                onNext={() => {
+   272→                  if (activeExerciseIdx < activeLesson.exercises.length - 1) { setActiveExerciseIdx(i => i + 1); setPhase('teaching'); }
+   273→                  else { setActiveLesson(null); setActiveExerciseIdx(0); setPhase('intro'); }
+   274→                }}
+   275→              />
+   276→            </div>
+   277→          )}
+   278→        </main>
+   279→
+   280→        {showXPAnimation && (
+   281→          <div className="fixed inset-0 pointer-events-none flex items-center justify-center z-50">
+   282→            <div className="animate-bounce text-4xl font-black text-[#A31F34] drop-shadow-lg">+{earnedXP} XP</div>
+   283→          </div>
+   284→        )}
+   285→      </div>
+   286→    );
+   287→  }
+   288→
+   289→  // ── MAIN CURRICULUM VIEW ────────────────────────────
+   290→  return (
+   291→    <div className="min-h-screen bg-background flex flex-col">
+   292→      {/* MIT-style main header — black bar */}
+   293→      <header className="bg-[#0a0a0a]">
+   294→        <div className="max-w-[1140px] mx-auto px-5 py-4 flex items-center justify-between">
+   295→          <div className="flex items-center gap-3">
+   296→            <span className="text-white font-bold text-xl tracking-tight">EBSOpenSource</span>
+   297→            <span className="text-white/30 text-xl">|</span>
+   298→            <span className="text-white/50 text-sm">Computational Biology Curriculum</span>
+   299→          </div>
+   300→          <div className="flex items-center gap-4">
+   301→            <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1.5">
+   302→              <span className="text-sm">🔥</span>
+   303→              <span className="font-bold text-white text-sm" suppressHydrationWarning>{progress.streak}</span>
+   304→            </div>
+   305→            <div className="flex items-center gap-1.5 bg-[#A31F34]/80 rounded-full px-3 py-1.5">
+   306→              <span className="text-sm">⭐</span>
+   307→              <span className="font-bold text-white text-sm" suppressHydrationWarning>{progress.xp} XP</span>
+   308→            </div>
+   309→          </div>
+   310→        </div>
+   311→      </header>
+   312→
+   313→      {/* Red secondary bar with track tabs — MIT nav style */}
+   314→      <nav className="bg-[#A31F34]">
+   315→        <div className="max-w-[1140px] mx-auto px-5 flex gap-0">
+   316→          {tracks.map(t => (
+   317→            <button
+   318→              key={t.id}
+   319→              onClick={() => setCurrentTrack(t.id)}
+   320→              className={`px-6 py-2.5 text-sm font-semibold transition-all relative ${
+   321→                currentTrack === t.id
+   322→                  ? 'text-white bg-white/15'
+   323→                  : 'text-white/70 hover:text-white hover:bg-white/10'
+   324→              }`}
+   325→            >
+   326→              {t.title}
+   327→              {currentTrack === t.id && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white" />}
+   328→            </button>
+   329→          ))}
+   330→        </div>
+   331→      </nav>
+   332→
+   333→      {/* Content */}
+   334→      <main className="flex-1 max-w-[1140px] mx-auto w-full px-5 py-10">
+   335→        {/* Hero section */}
+   336→        <div className="mb-12 pb-8 border-b border-border">
+   337→          <h1 className="text-4xl font-bold text-foreground tracking-tight mb-2">{track.title}</h1>
+   338→          <p className="text-lg text-muted-foreground max-w-2xl">{track.description}</p>
+   339→        </div>
+   340→
+   341→        {/* Curriculum units */}
+   342→        <div className="space-y-12">
+   343→          {track.units.map((unit, unitIdx) => {
+   344→            const unitProg = getUnitProgress(unit, progress.completedExercises);
+   345→            return (
+   346→              <section key={unit.id}>
+   347→                <div className="flex items-baseline gap-4 mb-5">
+   348→                  <h2 className="text-xl font-bold text-foreground">{unit.title}</h2>
+   349→                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-[#A31F34]/10 text-[#A31F34]">
+   350→                    {unitProg}%
+   351→                  </span>
+   352→                </div>
+   353→                <p className="text-sm text-muted-foreground mb-5 -mt-3 ml-0">{unit.description}</p>
+   354→
+   355→                {/* Lessons grid */}
+   356→                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+   357→                  {unit.lessons.map((lesson) => {
+   358→                    const lessonProg = getLessonProgress(lesson.id, progress.completedExercises);
+   359→                    const isComplete = lessonProg === 100;
+   360→                    const isStarted = lessonProg > 0;
+   361→                    return (
+   362→                      <button
+   363→                        key={lesson.id}
+   364→                        onClick={() => {
+   365→                          setActiveLesson(lesson);
+   366→                          const firstIncomplete = lesson.exercises.findIndex(e => !progress.completedExercises.includes(e.id));
+   367→                          setActiveExerciseIdx(firstIncomplete >= 0 ? firstIncomplete : 0);
+   368→                          setPhase('intro');
+   369→                        }}
+   370→                        className={`group text-left p-5 rounded-lg border transition-all duration-200 hover:shadow-md active:scale-[0.99] ${
+   371→                          isComplete
+   372→                            ? 'bg-[#A31F34]/5 border-[#A31F34]/20 hover:border-[#A31F34]/40'
+   373→                            : isStarted
+   374→                            ? 'bg-[#1E669E]/5 border-[#1E669E]/20 hover:border-[#1E669E]/40'
+   375→                            : 'bg-card border-border hover:border-[#A31F34]/30'
+   376→                        }`}
+   377→                      >
+   378→                        {/* Status indicator */}
+   379→                        <div className="flex items-center gap-2 mb-3">
+   380→                          <div className={`w-2 h-2 rounded-full ${
+   381→                            isComplete ? 'bg-[#A31F34]' : isStarted ? 'bg-[#1E669E]' : 'bg-muted-foreground/30'
+   382→                          }`} />
+   383→                          <span className={`text-[10px] uppercase tracking-widest font-semibold ${
+   384→                            isComplete ? 'text-[#A31F34]' : isStarted ? 'text-[#1E669E]' : 'text-muted-foreground'
+   385→                          }`}>
+   386→                            {isComplete ? 'Complete' : isStarted ? 'In Progress' : 'Not Started'}
+   387→                          </span>
+   388→                          <span className="ml-auto text-xs font-bold text-[#A31F34]">+{lesson.xpReward} XP</span>
+   389→                        </div>
+   390→
+   391→                        <h3 className="font-semibold text-foreground text-sm mb-1">{lesson.title}</h3>
+   392→                        <p className="text-xs text-muted-foreground mb-3 line-clamp-2">{lesson.description}</p>
+   393→
+   394→                        <div className="h-1 bg-secondary rounded-full overflow-hidden">
+   395→                          <div
+   396→                            className={`h-full rounded-full transition-all duration-500 ${isComplete ? 'bg-[#A31F34]' : isStarted ? 'bg-[#1E669E]' : 'bg-muted-foreground/20'}`}
+   397→                            style={{ width: `${lessonProg}%` }}
+   398→                          />
+   399→                        </div>
+   400→                      </button>
+   401→                    );
+   402→                  })}
+   403→                </div>
+   404→
+   405→                {/* Final Project Card */}
+   406→                {unit.finalProject && (
+   407→                  <div className="mt-5 p-5 rounded-lg border-2 border-dashed border-[#A31F34]/30 bg-[#A31F34]/[0.03]">
+   408→                    <div className="flex items-start gap-4">
+   409→                      <div className="w-10 h-10 rounded-lg bg-[#A31F34] flex items-center justify-center flex-shrink-0">
+   410→                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+   411→                      </div>
+   412→                      <div className="flex-1">
+   413→                        <div className="flex items-center gap-2 mb-1">
+   414→                          <h3 className="font-bold text-foreground text-sm">Final Project: {unit.finalProject.title}</h3>
+   415→                          <span className="text-[10px] font-bold text-[#A31F34] bg-[#A31F34]/10 px-2 py-0.5 rounded-full">+{unit.finalProject.xpReward} XP</span>
+   416→                        </div>
+   417→                        <p className="text-xs text-muted-foreground mb-2">{unit.finalProject.description}</p>
+   418→                        <button
+   419→                          onClick={() => { setActiveFinalProject(unit.finalProject); setPhase('finalproject'); }}
+   420→                          className="text-xs font-semibold text-[#A31F34] hover:text-[#8B1A2C] transition-colors"
+   421→                        >
+   422→                          View Project Details →
+   423→                        </button>
+   424→                      </div>
+   425→                    </div>
+   426→                  </div>
+   427→                )}
+   428→              </section>
+   429→            );
+   430→          })}
+   431→        </div>
+   432→      </main>
+   433→
+   434→      {/* Footer — MIT-style black footer */}
+   435→      <footer className="mt-auto bg-[#0a0a0a] text-white/50 py-6">
+   436→        <div className="max-w-[1140px] mx-auto px-5 flex items-center justify-between">
+   437→          <span className="text-sm">EBSOpenSource — R & Python for Computational Biology</span>
+   438→          <span className="text-xs">Inspired by MIT OpenCourseWare</span>
+   439→        </div>
+   440→      </footer>
+   441→    </div>
+   442→  );
+   443→}
+   444→
+   445→// ============================================================
+   446→// Exercise Card — QUIZ phase
+   447→// ============================================================
+   448→function ExerciseCard({ exercise, lesson, isCompleted, onAnswer }: {
+   449→  exercise: Exercise; lesson: Lesson; isCompleted: boolean; onAnswer: (answer: string | number) => boolean;
+   450→}) {
+   451→  const [selected, setSelected] = useState<string | null>(null);
+   452→  const [textInput, setTextInput] = useState('');
+   453→
+   454→  const typeLabel: Record<ExerciseType, string> = {
+   455→    multiple_choice: 'Multiple Choice', fill_blank: 'Fill in the Blank', code_order: 'Arrange the Code',
+   456→    true_false: 'True or False', match_pairs: 'Match the Pairs', code_output: 'Code Output', code_fix: 'Fix the Code',
+   457→  };
+   458→
+   459→  const handleSubmit = () => {
+   460→    const answer = exercise.type === 'fill_blank' || exercise.type === 'code_output' ? textInput : selected || '';
+   461→    onAnswer(answer);
+   462→  };
+   463→
+   464→  return (
+   465→    <div className="space-y-5">
+   466→      <div className="flex items-center gap-2">
+   467→        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">{typeLabel[exercise.type]}</span>
+   468→        {isCompleted && <span className="text-[10px] font-semibold text-[#A31F34] uppercase tracking-widest">Completed</span>}
+   469→      </div>
+   470→
+   471→      <div className="border border-border rounded-lg p-5">
+   472→        <h2 className="text-lg font-bold text-foreground mb-3">{exercise.question}</h2>
+   473→        {exercise.code && (
+   474→          <pre className="bg-[#0a0a0a] text-[#e2697d] rounded-lg p-4 text-sm font-mono overflow-x-auto leading-6">{exercise.code}</pre>
+   475→        )}
+   476→      </div>
+   477→
+   478→      <div className="space-y-2">
+   479→        {(exercise.type === 'multiple_choice' || exercise.type === 'code_order' || exercise.type === 'code_fix') && exercise.options && (
+   480→          exercise.options.map((opt, i) => {
+   481→            const isSelected = selected === opt;
+   482→            return (
+   483→              <button key={i} onClick={() => setSelected(opt)}
+   484→                className={`w-full text-left p-3.5 rounded-lg border transition-all duration-150 text-sm ${
+   485→                  isSelected ? 'bg-[#A31F34]/5 border-[#A31F34] text-foreground' : 'bg-card border-border text-foreground hover:border-[#A31F34]/30'
+   486→                }`}>
+   487→                <span className="inline-flex items-center gap-2.5">
+   488→                  <span className={`w-5 h-5 rounded-full border-2 flex items-center justify-center text-[10px] font-bold transition-colors ${
+   489→                    isSelected ? 'bg-[#A31F34] text-white border-[#A31F34]' : 'border-border text-muted-foreground'
+   490→                  }`}>{isSelected ? '●' : String.fromCharCode(65 + i)}</span>
+   491→                  {opt}
+   492→                </span>
+   493→              </button>
+   494→            );
+   495→          })
+   496→        )}
+   497→
+   498→        {(exercise.type === 'fill_blank' || exercise.type === 'code_output') && exercise.options && (
+   499→          exercise.options.map((opt, i) => {
+   500→            const isSelected = selected === opt;
+   501→            return (
+   502→              <button key={i} onClick={() => { setSelected(opt); setTextInput(opt); }}
+   503→                className={`w-full text-left p-3.5 rounded-lg border transition-all duration-150 font-mono text-sm ${
+   504→                  isSelected ? 'bg-[#A31F34]/5 border-[#A31F34] text-foreground' : 'bg-card border-border text-foreground hover:border-[#A31F34]/30'
+   505→                }`}>{opt}</button>
+   506→            );
+   507→          })
+   508→        )}
+   509→
+   510→        {exercise.type === 'true_false' && (
+   511→          <div className="flex gap-3">
+   512→            {['true', 'false'].map(opt => {
+   513→              const isSelected = selected === opt;
+   514→              return (
+   515→                <button key={opt} onClick={() => setSelected(opt)}
+   516→                  className={`flex-1 py-3.5 rounded-lg border-2 font-semibold text-sm transition-all duration-150 ${
+   517→                    isSelected
+   518→                      ? opt === 'true' ? 'bg-[#A31F34]/10 border-[#A31F34] text-[#A31F34]' : 'bg-destructive/10 border-destructive text-destructive'
+   519→                      : 'bg-card border-border text-foreground hover:border-[#A31F34]/30'
+   520→                  }`}>
+   521→                  {opt === 'true' ? 'True' : 'False'}
+   522→                </button>
+   523→              );
+   524→            })}
+   525→          </div>
+   526→        )}
+   527→      </div>
+   528→
+   529→      <button onClick={handleSubmit} disabled={!selected && !textInput}
+   530→        className={`w-full py-3.5 rounded-lg font-semibold text-base transition-all duration-150 ${
+   531→          selected || textInput
+   532→            ? 'bg-[#A31F34] text-white hover:bg-[#8B1A2C] active:scale-[0.99]'
+   533→            : 'bg-secondary text-muted-foreground cursor-not-allowed'
+   534→        }`}>Check Answer</button>
+   535→    </div>
+   536→  );
+   537→}
+   538→
+   539→// ============================================================
+   540→// Result Card
+   541→// ============================================================
+   542→function ResultCard({ exercise, lesson, isCompleted, onNext }: {
+   543→  exercise: Exercise; lesson: Lesson; isCompleted: boolean; onNext: () => void;
+   544→}) {
+   545→  return (
+   546→    <div className="space-y-5">
+   547→      <div className={`rounded-lg border p-5 ${isCompleted ? 'bg-[#A31F34]/5 border-[#A31F34]/30' : 'bg-destructive/5 border-destructive/30'}`}>
+   548→        <h3 className={`font-bold text-lg ${isCompleted ? 'text-[#A31F34]' : 'text-destructive'}`}>
+   549→          {isCompleted ? `Correct — +${lesson.xpReward} XP` : 'Not quite right'}
+   550→        </h3>
+   551→      </div>
+   552→      <div className="border border-border rounded-lg p-5 space-y-2">
+   553→        <h4 className="font-semibold text-foreground text-sm">Explanation</h4>
+   554→        <p className="text-muted-foreground text-sm leading-7">{exercise.explanation}</p>
+   555→      </div>
+   556→      {exercise.hint && (
+   557→        <div className="bg-[#1E669E]/5 border border-[#1E669E]/20 rounded-lg p-4">
+   558→          <p className="text-[#1E669E] text-sm"><span className="font-semibold">Hint:</span> {exercise.hint}</p>
+   559→        </div>
+   560→      )}
+   561→      <button onClick={onNext}
+   562→        className="w-full py-3.5 rounded-lg font-semibold text-base bg-[#A31F34] text-white hover:bg-[#8B1A2C] active:scale-[0.99] transition-all">
+   563→        Continue →
+   564→      </button>
+   565→    </div>
+   566→  );
+   567→}
+   568→

@@ -1,0 +1,495 @@
+     1→     1→
+     2→     2→<!DOCTYPE html>
+     3→     3→<html lang="en-US">
+     4→     4→<head>
+     5→     5→        <meta charset="UTF-8">
+     6→     6→        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     7→     7→        <link rel="profile" href="http://gmpg.org/xfn/11">
+     8→     8→        <title>Student Group Template</title>
+     9→     9→<meta name='robots' content='noindex, nofollow' />
+    10→    10→<link rel="alternate" type="application/rss+xml" title="Student Group Template &raquo; Feed" href="https://sites.mit.edu/student-template2/feed/" />
+    11→    11→<link rel="alternate" type="application/rss+xml" title="Student Group Template &raquo; Comments Feed" href="https://sites.mit.edu/student-template2/comments/feed/" />
+    12→    12→<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://sites.mit.edu/student-template2/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsites.mit.edu%2Fstudent-template2%2F" />
+    13→    13→<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://sites.mit.edu/student-template2/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsites.mit.edu%2Fstudent-template2%2F&#038;format=xml" />
+    14→    14→<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+    15→    15→img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+    16→    16→/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+    17→    17→</style>
+    18→    18→<style id='wp-emoji-styles-inline-css' type='text/css'>
+    19→    19→
+    20→    20→        img.wp-smiley, img.emoji {
+    21→    21→                display: inline !important;
+    22→    22→                border: none !important;
+    23→    23→                box-shadow: none !important;
+    24→    24→                height: 1em !important;
+    25→    25→                width: 1em !important;
+    26→    26→                margin: 0 0.07em !important;
+    27→    27→                vertical-align: -0.1em !important;
+    28→    28→                background: none !important;
+    29→    29→                padding: 0 !important;
+    30→    30→        }
+    31→    31→/*# sourceURL=wp-emoji-styles-inline-css */
+    32→    32→</style>
+    33→    33→<style id='wp-block-library-inline-css' type='text/css'>
+    34→    34→:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+    35→    35→
+    36→    36→/*# sourceURL=wp-block-library-inline-css */
+    37→    37→</style>
+    38→    38→<style id='wp-block-cover-inline-css' type='text/css'>
+    39→    39→.wp-block-cover,.wp-block-cover-image{align-items:center;background-position:50%;box-sizing:border-box;display:flex;justify-content:center;min-height:430px;overflow:hidden;overflow:clip;padding:1em;position:relative}.wp-block-cover .has-background-dim:not([class*=-background-color]),.wp-block-cover-image .has-background-dim:not([class*=-background-color]),.wp-block-cover-image.has-background-dim:not([class*=-background-color]),.wp-block-cover.has-background-dim:not([class*=-background-color]){background-color:#000}.wp-block-cover .has-background-dim.has-background-gradient,.wp-block-cover-image .has-background-dim.has-background-gradient{background-color:initial}.wp-block-cover-image.has-background-dim:before,.wp-block-cover.has-background-dim:before{background-color:inherit;content:""}.wp-block-cover .wp-block-cover__background,.wp-block-cover .wp-block-cover__gradient-background,.wp-block-cover-image .wp-block-cover__background,.wp-block-cover-image .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim:not(.has-background-gradient):before,.wp-block-cover.has-background-dim:not(.has-background-gradient):before{bottom:0;left:0;opacity:.5;position:absolute;right:0;top:0}.wp-block-cover-image.has-background-dim.has-background-dim-10 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-10 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-10:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-10 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-10 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-10:not(.has-background-gradient):before{opacity:.1}.wp-block-cover-image.has-background-dim.has-background-dim-20 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-20 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-20:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-20 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-20 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-20:not(.has-background-gradient):before{opacity:.2}.wp-block-cover-image.has-background-dim.has-background-dim-30 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-30 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-30:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-30 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-30 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-30:not(.has-background-gradient):before{opacity:.3}.wp-block-cover-image.has-background-dim.has-background-dim-40 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-40 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-40:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-40 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-40 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-40:not(.has-background-gradient):before{opacity:.4}.wp-block-cover-image.has-background-dim.has-background-dim-50 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-50 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-50:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-50 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-50 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-50:not(.has-background-gradient):before{opacity:.5}.wp-block-cover-image.has-background-dim.has-background-dim-60 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-60 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-60:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-60 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-60 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-60:not(.has-background-gradient):before{opacity:.6}.wp-block-cover-image.has-background-dim.has-background-dim-70 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-70 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-70:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-70 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-70 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-70:not(.has-background-gradient):before{opacity:.7}.wp-block-cover-image.has-background-dim.has-background-dim-80 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-80 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-80:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-80 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-80 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-80:not(.has-background-gradient):before{opacity:.8}.wp-block-cover-image.has-background-dim.has-background-dim-90 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-90 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-90:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-90 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-90 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-90:not(.has-background-gradient):before{opacity:.9}.wp-block-cover-image.has-background-dim.has-background-dim-100 .wp-block-cover__background,.wp-block-cover-image.has-background-dim.has-background-dim-100 .wp-block-cover__gradient-background,.wp-block-cover-image.has-background-dim.has-background-dim-100:not(.has-background-gradient):before,.wp-block-cover.has-background-dim.has-background-dim-100 .wp-block-cover__background,.wp-block-cover.has-background-dim.has-background-dim-100 .wp-block-cover__gradient-background,.wp-block-cover.has-background-dim.has-background-dim-100:not(.has-background-gradient):before{opacity:1}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-0,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-0,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-0,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-0{opacity:0}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-10,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-10,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-10,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-10{opacity:.1}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-20,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-20,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-20,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-20{opacity:.2}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-30,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-30,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-30,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-30{opacity:.3}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-40,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-40,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-40,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-40{opacity:.4}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-50,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-50,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-50,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-50{opacity:.5}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-60,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-60,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-60,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-60{opacity:.6}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-70,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-70,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-70,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-70{opacity:.7}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-80,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-80,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-80,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-80{opacity:.8}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-90,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-90,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-90,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-90{opacity:.9}.wp-block-cover .wp-block-cover__background.has-background-dim.has-background-dim-100,.wp-block-cover .wp-block-cover__gradient-background.has-background-dim.has-background-dim-100,.wp-block-cover-image .wp-block-cover__background.has-background-dim.has-background-dim-100,.wp-block-cover-image .wp-block-cover__gradient-background.has-background-dim.has-background-dim-100{opacity:1}.wp-block-cover-image.alignleft,.wp-block-cover-image.alignright,.wp-block-cover.alignleft,.wp-block-cover.alignright{max-width:420px;width:100%}.wp-block-cover-image.aligncenter,.wp-block-cover-image.alignleft,.wp-block-cover-image.alignright,.wp-block-cover.aligncenter,.wp-block-cover.alignleft,.wp-block-cover.alignright{display:flex}.wp-block-cover .wp-block-cover__inner-container,.wp-block-cover-image .wp-block-cover__inner-container{color:inherit;position:relative;width:100%}.wp-block-cover-image.is-position-top-left,.wp-block-cover.is-position-top-left{align-items:flex-start;justify-content:flex-start}.wp-block-cover-image.is-position-top-center,.wp-block-cover.is-position-top-center{align-items:flex-start;justify-content:center}.wp-block-cover-image.is-position-top-right,.wp-block-cover.is-position-top-right{align-items:flex-start;justify-content:flex-end}.wp-block-cover-image.is-position-center-left,.wp-block-cover.is-position-center-left{align-items:center;justify-content:flex-start}.wp-block-cover-image.is-position-center-center,.wp-block-cover.is-position-center-center{align-items:center;justify-content:center}.wp-block-cover-image.is-position-center-right,.wp-block-cover.is-position-center-right{align-items:center;justify-content:flex-end}.wp-block-cover-image.is-position-bottom-left,.wp-block-cover.is-position-bottom-left{align-items:flex-end;justify-content:flex-start}.wp-block-cover-image.is-position-bottom-center,.wp-block-cover.is-position-bottom-center{align-items:flex-end;justify-content:center}.wp-block-cover-image.is-position-bottom-right,.wp-block-cover.is-position-bottom-right{align-items:flex-end;justify-content:flex-end}.wp-block-cover-image.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container{margin:0}.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-bottom-left .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-bottom-right .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-center-left .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-center-right .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-top-left .wp-block-cover__inner-container,.wp-block-cover-image.has-custom-content-position.has-custom-content-position.is-position-top-right .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-bottom-left .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-bottom-right .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-center-left .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-center-right .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-top-left .wp-block-cover__inner-container,.wp-block-cover.has-custom-content-position.has-custom-content-position.is-position-top-right .wp-block-cover__inner-container{margin:0;width:auto}.wp-block-cover .wp-block-cover__image-background,.wp-block-cover video.wp-block-cover__video-background,.wp-block-cover-image .wp-block-cover__image-background,.wp-block-cover-image video.wp-block-cover__video-background{border:none;bottom:0;box-shadow:none;height:100%;left:0;margin:0;max-height:none;max-width:none;object-fit:cover;outline:none;padding:0;position:absolute;right:0;top:0;width:100%}.wp-block-cover-image.has-parallax,.wp-block-cover.has-parallax,.wp-block-cover__image-background.has-parallax,video.wp-block-cover__video-background.has-parallax{background-attachment:fixed;background-repeat:no-repeat;background-size:cover}@supports (-webkit-touch-callout:inherit){.wp-block-cover-image.has-parallax,.wp-block-cover.has-parallax,.wp-block-cover__image-background.has-parallax,video.wp-block-cover__video-background.has-parallax{background-attachment:scroll}}@media (prefers-reduced-motion:reduce){.wp-block-cover-image.has-parallax,.wp-block-cover.has-parallax,.wp-block-cover__image-background.has-parallax,video.wp-block-cover__video-background.has-parallax{background-attachment:scroll}}.wp-block-cover-image.is-repeated,.wp-block-cover.is-repeated,.wp-block-cover__image-background.is-repeated,video.wp-block-cover__video-background.is-repeated{background-repeat:repeat;background-size:auto}.wp-block-cover-image-text,.wp-block-cover-image-text a,.wp-block-cover-image-text a:active,.wp-block-cover-image-text a:focus,.wp-block-cover-image-text a:hover,.wp-block-cover-text,.wp-block-cover-text a,.wp-block-cover-text a:active,.wp-block-cover-text a:focus,.wp-block-cover-text a:hover,section.wp-block-cover-image h2,section.wp-block-cover-image h2 a,section.wp-block-cover-image h2 a:active,section.wp-block-cover-image h2 a:focus,section.wp-block-cover-image h2 a:hover{color:#fff}.wp-block-cover-image .wp-block-cover.has-left-content{justify-content:flex-start}.wp-block-cover-image .wp-block-cover.has-right-content{justify-content:flex-end}.wp-block-cover-image.has-left-content .wp-block-cover-image-text,.wp-block-cover.has-left-content .wp-block-cover-text,section.wp-block-cover-image.has-left-content>h2{margin-left:0;text-align:left}.wp-block-cover-image.has-right-content .wp-block-cover-image-text,.wp-block-cover.has-right-content .wp-block-cover-text,section.wp-block-cover-image.has-right-content>h2{margin-right:0;text-align:right}.wp-block-cover .wp-block-cover-text,.wp-block-cover-image .wp-block-cover-image-text,section.wp-block-cover-image>h2{font-size:2em;line-height:1.25;margin-bottom:0;max-width:840px;padding:.44em;text-align:center;z-index:1}:where(.wp-block-cover-image:not(.has-text-color)),:where(.wp-block-cover:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#000}:root :where(.wp-block-cover h1:not(.has-text-color)),:root :where(.wp-block-cover h2:not(.has-text-color)),:root :where(.wp-block-cover h3:not(.has-text-color)),:root :where(.wp-block-cover h4:not(.has-text-color)),:root :where(.wp-block-cover h5:not(.has-text-color)),:root :where(.wp-block-cover h6:not(.has-text-color)),:root :where(.wp-block-cover p:not(.has-text-color)){color:inherit}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__image-background,body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__video-background{z-index:0}body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__background,body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__gradient-background,body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__inner-container,body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)).has-background-dim:not(.has-background-gradient):before{z-index:1}.has-modal-open body:not(.editor-styles-wrapper) .wp-block-cover:not(.wp-block-cover:has(.wp-block-cover__background+.wp-block-cover__inner-container)) .wp-block-cover__inner-container{z-index:auto}
+    40→    40→/*# sourceURL=https://sites.mit.edu/student-template2/wp-includes/blocks/cover/style.min.css */
+    41→    41→</style>
+    42→    42→<style id='wp-block-heading-inline-css' type='text/css'>
+    43→    43→h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+    44→    44→/*# sourceURL=https://sites.mit.edu/student-template2/wp-includes/blocks/heading/style.min.css */
+    45→    45→</style>
+    46→    46→<style id='wp-block-image-inline-css' type='text/css'>
+    47→    47→.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-button{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay .close-button:hover,.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+    48→    48→/*# sourceURL=https://sites.mit.edu/student-template2/wp-includes/blocks/image/style.min.css */
+    49→    49→</style>
+    50→    50→<style id='wp-block-columns-inline-css' type='text/css'>
+    51→    51→.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+    52→    52→/*# sourceURL=https://sites.mit.edu/student-template2/wp-includes/blocks/columns/style.min.css */
+    53→    53→</style>
+    54→    54→<style id='wp-block-paragraph-inline-css' type='text/css'>
+    55→    55→.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+    56→    56→/*# sourceURL=https://sites.mit.edu/student-template2/wp-includes/blocks/paragraph/style.min.css */
+    57→    57→</style>
+    58→    58→
+    59→    59→<style id='classic-theme-styles-inline-css' type='text/css'>
+    60→    60→/*! This file is auto-generated */
+    61→    61→.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+    62→    62→/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+    63→    63→</style>
+    64→    64→<link rel='stylesheet' id='coblocks-extensions-css' href='https://sites.mit.edu/student-template2/wp-content/plugins/coblocks/dist/style-coblocks-extensions.css?ver=3.1.17.1' type='text/css' media='all' />
+    65→    65→<link rel='stylesheet' id='coblocks-animation-css' href='https://sites.mit.edu/student-template2/wp-content/plugins/coblocks/dist/style-coblocks-animation.css?ver=2677611078ee87eb3b1c' type='text/css' media='all' />
+    66→    66→<style id='global-styles-inline-css' type='text/css'>
+    67→    67→:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: white;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--color-bg-alt: #ececea;--wp--preset--color--header-main-bg-color: #0a0a0a;--wp--preset--color--header-secondary-bg-color: #a31f34;--wp--preset--color--footer-main-bg-color: #000000;--wp--preset--color--color-bg: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13.78px;--wp--preset--font-size--medium: 21.2px;--wp--preset--font-size--large: 38.16px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--larger: 50.88px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+    68→    68→:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+    69→    69→/*# sourceURL=global-styles-inline-css */
+    70→    70→</style>
+    71→    71→
+    72→    72→<link rel='stylesheet' id='cpschool-styles-css' href='https://sites.mit.edu/student-template2/wp-content/themes/cpschool/css/theme.min.css?ver=1.1772529760' type='text/css' media='all' />
+    73→    73→<link rel='stylesheet' id='aos-css' href='https://sites.mit.edu/student-template2/wp-content/themes/cpschool/css/aos.css?ver=1.1582726405' type='text/css' media='all' />
+    74→    74→<link rel='stylesheet' id='cpsc-styles-css' href='https://sites.mit.edu/student-template2/wp-content/themes/mit-flex/css/theme.min.css?ver=1729080718' type='text/css' media='all' />
+    75→    75→<script type="text/javascript" id="jquery-core-js-extra">
+    76→    76→/* <![CDATA[ */
+    77→    77→var msreader_featured_posts = {"saving":"Saving...","post_featured":"This post is featured","feature":"Feature","unfeature":"Unfeature"};
+    78→    78→//# sourceURL=jquery-core-js-extra
+    79→    79→/* ]]> */
+    80→    80→</script>
+    81→    81→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    82→    82→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+    83→    83→<script type="text/javascript" id="jquery-js-after">
+    84→    84→/* <![CDATA[ */
+    85→    85→var ajaxurl = 'https://sites.mit.edu/student-template2/wp-admin/admin-ajax.php';
+    86→    86→//# sourceURL=jquery-js-after
+    87→    87→/* ]]> */
+    88→    88→</script>
+    89→    89→<link rel="https://api.w.org/" href="https://sites.mit.edu/student-template2/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://sites.mit.edu/student-template2/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sites.mit.edu/student-template2/xmlrpc.php?rsd" />
+    90→    90→<meta name="generator" content="Student Group Template 6.9.4 - https://sites.mit.edu/student-template2" />
+    91→    91→<link rel="canonical" href="https://sites.mit.edu/student-template2/" />
+    92→    92→<link rel='shortlink' href='https://sites.mit.edu/student-template2/' />
+    93→    93→        <style>
+    94→    94→                @media screen and (max-width: 782px) {
+    95→    95→                        #wpadminbar li#wp-admin-bar-log-in,
+    96→    96→                        #wpadminbar li#wp-admin-bar-register {
+    97→    97→                                display: block;
+    98→    98→                        }
+    99→    99→
+   100→   100→                        #wpadminbar li#wp-admin-bar-log-in a,
+   101→   101→                        #wpadminbar li#wp-admin-bar-register a {
+   102→   102→                                padding: 0 8px;
+   103→   103→                        }
+   104→   104→                }
+   105→   105→        </style>
+   106→   106→
+   107→   107→        <script type="text/javascript">
+   108→   108→            var jQueryMigrateHelperHasSentDowngrade = false;
+   109→   109→
+   110→   110→                        window.onerror = function( msg, url, line, col, error ) {
+   111→   111→                                // Break out early, do not processing if a downgrade reqeust was already sent.
+   112→   112→                                if ( jQueryMigrateHelperHasSentDowngrade ) {
+   113→   113→                                        return true;
+   114→   114→                }
+   115→   115→
+   116→   116→                                var xhr = new XMLHttpRequest();
+   117→   117→                                var nonce = '5071954d63';
+   118→   118→                                var jQueryFunctions = [
+   119→   119→                                        'andSelf',
+   120→   120→                                        'browser',
+   121→   121→                                        'live',
+   122→   122→                                        'boxModel',
+   123→   123→                                        'support.boxModel',
+   124→   124→                                        'size',
+   125→   125→                                        'swap',
+   126→   126→                                        'clean',
+   127→   127→                                        'sub',
+   128→   128→                ];
+   129→   129→                                var match_pattern = /\)\.(.+?) is not a function/;
+   130→   130→                var erroredFunction = msg.match( match_pattern );
+   131→   131→
+   132→   132→                // If there was no matching functions, do not try to downgrade.
+   133→   133→                if ( null === erroredFunction || typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+   134→   134→                    return true;
+   135→   135→                }
+   136→   136→
+   137→   137→                // Set that we've now attempted a downgrade request.
+   138→   138→                jQueryMigrateHelperHasSentDowngrade = true;
+   139→   139→
+   140→   140→                                xhr.open( 'POST', 'https://sites.mit.edu/student-template2/wp-admin/admin-ajax.php' );
+   141→   141→                                xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+   142→   142→                                xhr.onload = function () {
+   143→   143→                                        var response,
+   144→   144→                        reload = false;
+   145→   145→
+   146→   146→                                        if ( 200 === xhr.status ) {
+   147→   147→                        try {
+   148→   148→                                response = JSON.parse( xhr.response );
+   149→   149→
+   150→   150→                                reload = response.data.reload;
+   151→   151→                        } catch ( e ) {
+   152→   152→                                reload = false;
+   153→   153→                        }
+   154→   154→                    }
+   155→   155→
+   156→   156→                                        // Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+   157→   157→                                        if ( reload ) {
+   158→   158→                                                location.reload();
+   159→   159→                    }
+   160→   160→                                };
+   161→   161→
+   162→   162→                                xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+   163→   163→
+   164→   164→                                // Suppress error alerts in older browsers
+   165→   165→                                return true;
+   166→   166→                        }
+   167→   167→        </script>
+   168→   168→
+   169→   169→                <style type="text/css" id="branda-admin-bar">
+   170→   170→#wpadminbar                     .ub_admin_bar_image{
+   171→   171→                                max-width: 100%;
+   172→   172→                                max-height: 28px;
+   173→   173→                                padding: 2px 0;
+   174→   174→                        }
+   175→   175→                        #wpadminbar .ub-menu-item.dashicons {
+   176→   176→                                font-family: dashicons;
+   177→   177→                                top: 2px;
+   178→   178→                        }
+   179→   179→</style><meta name="mobile-web-app-capable" content="yes">
+   180→   180→<meta name="apple-mobile-web-app-capable" content="yes">
+   181→   181→<meta name="apple-mobile-web-app-title" content="Student Group Template - ">
+   182→   182→                                        <!-- Google Analytics tracking code output by Beehive Analytics Pro -->
+   183→   183→                                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-230LN9FWEQ&l=beehiveDataLayer"></script>
+   184→   184→                <script>
+   185→   185→                                                window.beehiveDataLayer = window.beehiveDataLayer || [];
+   186→   186→                        function gaplusu() {beehiveDataLayer.push(arguments);}
+   187→   187→                        gaplusu('js', new Date())
+   188→   188→                                                gaplusu('config', 'G-230LN9FWEQ', {
+   189→   189→                                'anonymize_ip': false,
+   190→   190→                                'allow_google_signals': false,
+   191→   191→                        })
+   192→   192→                                        </script>
+   193→   193→                <style type="text/css">
+   194→   194→/* <![CDATA[ */
+   195→   195→img.latex { vertical-align: middle; border: none; }
+   196→   196→/* ]]> */
+   197→   197→</style>
+   198→   198→<style id="kirki-inline-styles">.logo-font{font-family:inherit;}.container{max-width:1140px;}:root{--site-width:1140px;--content-width:1140px;--body-font-size:106;--roundness:10px;--shadows:0px;--color-bg:#ffffff;--color-bg-alt:#ececea;--color-bg-contrast:#000000;--color-bg-accent:#a31f34;--color-bg-accent-a:rgba(163,31,52,0.5);--color-bg-accent-contrast:#ffffff;--color-bg-accent-hl:#1e669e;--color-bg-accent-hl-a:rgba(30,102,158,0.5);--color-bg-accent-hl-contrast:#ffffff;--color-bg-alt-contrast:#000000;--color-bg-alt-accent:#a31f34;--color-bg-alt-accent-a:rgba(163,31,52,0.5);--color-bg-alt-accent-contrast:#ffffff;--color-bg-alt-accent-hl:#1a5b8e;--color-bg-alt-accent-hl-a:rgba(26,91,142,0.5);--color-bg-alt-accent-hl-contrast:#ffffff;--header-main-height:124.312px;--header-main-gap-height:0px;--header-main-padding-v:100;--header-main-bg-color:#0a0a0a;--header-main-bg-color-contrast:#ffffff;--header-main-bg-color-accent:#e2697d;--header-main-bg-color-accent-a:rgba(226,105,125,0.5);--header-main-bg-color-accent-contrast:#000000;--header-main-bg-color-accent-hl:#3594de;--header-main-bg-color-accent-hl-a:rgba(53,148,222,0.5);--header-main-bg-color-accent-hl-contrast:#000000;--header-main-logo-font-size:100;--header-main-font-size:100;--header-secondary-bg-color:#a31f34;--header-secondary-bg-color-contrast:#ffffff;--header-secondary-bg-color-accent:#f8e2e6;--header-secondary-bg-color-accent-a:rgba(248,226,230,0.5);--header-secondary-bg-color-accent-contrast:#000000;--header-secondary-bg-color-accent-hl:#d9e9f6;--header-secondary-bg-color-accent-hl-a:rgba(217,233,246,0.5);--header-secondary-bg-color-accent-hl-contrast:#000000;--header-secondary-font-size:106;--header-secondary-padding-v:0;--headers-font-size:100;--footer-main-bg-color:#000000;--footer-main-bg-color-contrast:#ffffff;--footer-main-bg-color-accent:#e15f75;--footer-main-bg-color-accent-a:rgba(225,95,117,0.5);--footer-main-bg-color-accent-contrast:#000000;--footer-main-bg-color-accent-hl:#2c90dc;--footer-main-bg-color-accent-hl-a:rgba(44,144,220,0.5);--footer-main-bg-color-accent-hl-contrast:#000000;}body{font-family:inter;}#navbar-main .nav{font-family:inherit;}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:inherit;}</style><style id='core-block-supports-inline-css' type='text/css'>
+   199→   199→.wp-container-core-columns-is-layout-9d6595d7{flex-wrap:nowrap;}
+   200→   200→/*# sourceURL=core-block-supports-inline-css */
+   201→   201→</style>
+   202→   202→
+   203→   203→</head>
+   204→   204→
+   205→   205→<body class="home wp-singular page-template-default page page-id-2 wp-embed-responsive wp-theme-cpschool wp-child-theme-mit-flex shadows-disabled animations-enabled navbar-main-strech-to-full h-style-separator-bottom sidebars-check-sticky singular main-wrapper-margin-top-disabled main-wrapper-margin-bottom-disabled navbar-secondary-under-main mit-flex-child mit-flex-child--mit-student-flex">
+   206→   206→
+   207→   207→<div class="site" id="page">
+   208→   208→        <a class="skip-link sr-only sr-only-focusable" href="#content">Skip to content</a>
+   209→   209→
+   210→   210→        
+   211→   211→        
+   212→   212→        
+   213→   213→                <div id="wrapper-navbar-main-top" ></div>
+   214→   214→        <div id="wrapper-navbar-main" class="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+   215→   215→                <nav id="navbar-main" class="navbar navbar-expand-md nav-styling-underline has-background has-header-main-bg-color-background-color" aria-label="main">
+   216→   216→                        <div class="navbar-container container-fluid">
+   217→   217→                                
+   218→   218→                                <!-- Your site title as branding in the menu -->
+   219→   219→                                                                                                                        <div class="navbar-brand-holder">
+   220→   220→                                                                                                
+   221→   221→                                                        <a class="navbar-brand logo-font custom-bg-disabled"  rel="home" href="https://sites.mit.edu/student-template2/" title="Student Group Template" itemprop="url">
+   222→   222→                                                                <span class="navbar-brand-text">Student Group Template</span>
+   223→   223→
+   224→   224→                                                                                                                        </a>
+   225→   225→
+   226→   226→                                                                                                                        <a rel="home" href="https://sites.mit.edu/student-template2/" title="Student Group Template" class="navbar-brand-subtext">
+   227→   227→                                                                                                                                        </a>
+   228→   228→                                                        
+   229→   229→                                                                                                                                                </div>
+   230→   230→                                                                        <!-- end custom logo -->
+   231→   231→
+   232→   232→                                
+   233→   233→                                <div class="navbar-navs-container">
+   234→   234→                                        <div id="navbar-main-nav-desktop" class="navbar-nav-container"><ul id="menu-main-desktop" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item active menu-item-37 nav-item"><a class="nav-link" title="About" href="https://sites.mit.edu/student-template2/"><span class="menu-item-text">About</span></a></li>
+   235→   235→<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14 nav-item"><a class="nav-link" title="Events" href="https://sites.mit.edu/student-template2/events/"><span class="menu-item-text">Events</span></a></li>
+   236→   236→<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13 nav-item"><a class="nav-link" title="Updates" href="https://sites.mit.edu/student-template2/updates/"><span class="menu-item-text">Updates</span></a></li>
+   237→   237→<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12 nav-item"><a class="nav-link" title="Resources" href="https://sites.mit.edu/student-template2/resources/"><span class="menu-item-text">Resources</span></a></li>
+   238→   238→</ul></div>
+   239→   239→                                        <div id="navbar-main-nav-buttons">
+   240→   240→                                                <ul class="nav navbar-nav navbar-button-nav-right">
+   241→   241→                                                                                                                        <li id="navbar-main-btn-search" >
+   242→   242→                                                                        <button type="button" class="btn btn-secondary nav-link has-styling" data-toggle="modal" data-target="#modal-search">
+   243→   243→                                                                                <i aria-hidden="true" class="cps-icon cps-icon-search"></i>
+   244→   244→                                                                                <span aria-hidden="true" class="d-none">Search</span>
+   245→   245→                                                                                <span class="sr-only">Toggle search interface</span>
+   246→   246→                                                                        </button>
+   247→   247→                                                                </li>
+   248→   248→                                                        
+   249→   249→                                                                                                                <li id="navbar-main-btn-slide-in-menu" class="btn-modal-slide-in-menu-holder has-mobile">
+   250→   250→                                                                <button type="button" class="btn btn-secondary nav-link has-styling" data-toggle="modal" data-target="#modal-slide-in-menu">
+   251→   251→                                                                        <i aria-hidden="true" class="cps-icon cps-icon-menu"></i>
+   252→   252→                                                                        <span aria-hidden="true" class="d-none">Menu</span>
+   253→   253→                                                                        <span class="sr-only">Toggle extended navigation</span>
+   254→   254→                                                                </button>
+   255→   255→                                                        </li>
+   256→   256→                                                </ul>
+   257→   257→                                        </div>
+   258→   258→                                </div>
+   259→   259→
+   260→   260→                                                        </div><!-- #navbar-container -->
+   261→   261→                </nav>
+   262→   262→        </div><!-- #wrapper-navbar end -->
+   263→   263→
+   264→   264→        
+   265→   265→        
+   266→   266→<div class="main-wrapper wrapper" id="page-wrapper">
+   267→   267→        <div class="container" id="content">
+   268→   268→                <div class="row">
+   269→   269→                        <!-- Do the left sidebar check -->
+   270→   270→                        
+   271→   271→
+   272→   272→<div class="col-md-12 col-xl-12 content-area" id="primary">
+   273→   273→
+   274→   274→                        <main class="site-main" id="main">
+   275→   275→                                                                        
+   276→   276→<article class="post-2 page type-page status-publish hentry" id="post-2">
+   277→   277→        
+   278→   278→        <div class="entry-content">
+   279→   279→                
+   280→   280→                
+   281→   281→<div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><img fetchpriority="high" decoding="async" width="374" height="249" class="wp-block-cover__image-background wp-image-25" alt="" src="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg" data-object-fit="cover" srcset="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg 374w, https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e-300x200.jpg 300w" sizes="(max-width: 374px) 100vw, 374px" /><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+   282→   282→<h2 class="wp-block-heading has-white-color has-text-color">Welcome</h2>
+   283→   283→
+   284→   284→
+   285→   285→
+   286→   286→<p class="has-white-color has-text-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   287→   287→</div></div>
+   288→   288→
+   289→   289→
+   290→   290→
+   291→   291→<h2 class="wp-block-heading">Introduction</h2>
+   292→   292→
+   293→   293→
+   294→   294→
+   295→   295→<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ornare lectus sit amet est placerat. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Quam pellentesque nec nam aliquam sem et. Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Eget nunc scelerisque viverra mauris. Praesent tristique magna sit amet purus gravida quis blandit turpis. Fringilla est ullamcorper eget nulla facilisi etiam dignissim. In pellentesque massa placerat duis ultricies. Quisque id diam vel quam. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Consequat nisl vel pretium lectus quam id leo in. Augue lacus viverra vitae congue eu consequat. Id semper risus in hendrerit. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Senectus et netus et malesuada.</p>
+   296→   296→
+   297→   297→
+   298→   298→
+   299→   299→<div class="wp-block-columns alignfull has-color-bg-alt-background-color has-background is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+   300→   300→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:25%"></div>
+   301→   301→
+   302→   302→
+   303→   303→
+   304→   304→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:50%">
+   305→   305→<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+   306→   306→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+   307→   307→<h3 class="wp-block-heading">Upcoming Events</h3>
+   308→   308→</div>
+   309→   309→</div>
+   310→   310→
+   311→   311→
+   312→   312→
+   313→   313→<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+   314→   314→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+   315→   315→<figure class="wp-block-image size-full"><img decoding="async" width="374" height="249" src="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg" alt="" class="wp-image-25" srcset="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg 374w, https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e-300x200.jpg 300w" sizes="(max-width: 374px) 100vw, 374px" /></figure>
+   316→   316→
+   317→   317→
+   318→   318→
+   319→   319→<h5 class="wp-block-heading">Nunc sed id semper risus</h5>
+   320→   320→
+   321→   321→
+   322→   322→
+   323→   323→<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat.</p>
+   324→   324→</div>
+   325→   325→
+   326→   326→
+   327→   327→
+   328→   328→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+   329→   329→<figure class="wp-block-image size-full"><img decoding="async" width="374" height="249" src="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg" alt="" class="wp-image-25" srcset="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg 374w, https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e-300x200.jpg 300w" sizes="(max-width: 374px) 100vw, 374px" /></figure>
+   330→   330→
+   331→   331→
+   332→   332→
+   333→   333→<h5 class="wp-block-heading">Ut tellus elementum sagittis vitae!</h5>
+   334→   334→
+   335→   335→
+   336→   336→
+   337→   337→<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   338→   338→</div>
+   339→   339→
+   340→   340→
+   341→   341→
+   342→   342→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+   343→   343→<figure class="wp-block-image size-full"><img decoding="async" width="374" height="249" src="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg" alt="" class="wp-image-25" srcset="https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e.jpg 374w, https://sites.mit.edu/student-template2/files/2023/10/photo-thumbnail-e-300x200.jpg 300w" sizes="(max-width: 374px) 100vw, 374px" /></figure>
+   344→   344→
+   345→   345→
+   346→   346→
+   347→   347→<h5 class="wp-block-heading">Viverra aliquet eget sit amet tellus cras</h5>
+   348→   348→
+   349→   349→
+   350→   350→
+   351→   351→<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris in aliquam sem fringilla ut morbi.</p>
+   352→   352→</div>
+   353→   353→</div>
+   354→   354→</div>
+   355→   355→
+   356→   356→
+   357→   357→
+   358→   358→<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:25%"></div>
+   359→   359→</div>
+   360→   360→
+   361→   361→                
+   362→   362→                        </div><!-- .entry-content -->
+   363→   363→
+   364→   364→        </article><!-- #post-## -->
+   365→   365→
+   366→   366→                                                                                                </main><!-- #main -->
+   367→   367→
+   368→   368→                        <!-- Do the right sidebar check -->
+   369→   369→                        
+   370→   370→</div><!-- #closing the primary container from /templates/global-templates/left-sidebar-check.php -->
+   371→   371→
+   372→   372→                </div><!-- .row -->
+   373→   373→        </div><!-- #content -->
+   374→   374→</div><!-- #page-wrapper -->
+   375→   375→
+   376→   376→
+   377→   377→
+   378→   378→
+   379→   379→<footer class="wrapper has-background has-footer-main-bg-color-background-color" id="wrapper-footer">
+   380→   380→        <div id="footer-content">
+   381→   381→                
+   382→   382→
+   383→   383→                
+   384→   384→                <div class="mit-footer">
+   385→   385→                        <p>
+   386→   386→    <strong>Student Group Template</strong><br/>
+   387→   387→    Massachusetts Institute of Technology
+   388→   388→</p>
+   389→   389→
+   390→   390→<p>
+   391→   391→    <a href="mailto:campuspress-support@mit.edu">campuspress-support@mit.edu</a>
+   392→   392→</p>
+   393→   393→
+   394→   394→
+   395→   395→<p class="mit-footer__links">
+   396→   396→    <a href="https://accessibility.mit.edu/">Accessibility</a>
+   397→   397→</p>            </div>
+   398→   398→        </div>
+   399→   399→
+   400→   400→        <div id="footer-image-holder">
+   401→   401→                        </div>
+   402→   402→</footer><!-- wrapper end -->
+   403→   403→
+   404→   404→</div><!-- #page we need this extra closing tag here -->
+   405→   405→
+   406→   406→
+   407→   407→<div id="modal-slide-in-menu" class="modal fade modal-slide-in-right modal-full-height nav-styling-underline" tabindex="-1" role="dialog" aria-label="slide-in menu" aria-hidden="true">
+   408→   408→        <div class="modal-dialog" role="document">
+   409→   409→                <div class="modal-content has-background has-header-main-bg-color-background-color">
+   410→   410→                        <div class="modal-header">
+   411→   411→                                <button type="button" class="close" data-dismiss="modal">
+   412→   412→                                        <i aria-hidden="true" class="cps-icon cps-icon-close"></i>
+   413→   413→                                        <span class="sr-only">close menu</span>
+   414→   414→                                </button>
+   415→   415→                        </div>
+   416→   416→                        <div class="modal-body">
+   417→   417→                                                                        <nav class="menu-mobile" aria-label="Mobile" role="navigation">
+   418→   418→                                                <div class="menu-main-menu-container"><ul id="menu-main-mobile" class="nav flex-column"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item active menu-item-37 nav-item"><a class="nav-link" title="About" href="https://sites.mit.edu/student-template2/"><span class="menu-item-text">About</span></a></li>
+   419→   419→<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14 nav-item"><a class="nav-link" title="Events" href="https://sites.mit.edu/student-template2/events/"><span class="menu-item-text">Events</span></a></li>
+   420→   420→<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13 nav-item"><a class="nav-link" title="Updates" href="https://sites.mit.edu/student-template2/updates/"><span class="menu-item-text">Updates</span></a></li>
+   421→   421→<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12 nav-item"><a class="nav-link" title="Resources" href="https://sites.mit.edu/student-template2/resources/"><span class="menu-item-text">Resources</span></a></li>
+   422→   422→</ul></div>
+   423→   423→                                        </nav>
+   424→   424→                                                                </div>
+   425→   425→                </div>
+   426→   426→        </div>
+   427→   427→</div><!-- #modal-slide-in-menu -->
+   428→   428→<div id="modal-search" class="modal fade modal-slide-in-top modal-close-inline modal-site-width modal-padding-lg" tabindex="-1" role="dialog" aria-label="search" aria-hidden="true">
+   429→   429→        <div class="modal-dialog site-width-max" role="document">
+   430→   430→                <div class="modal-content has-background has-header-main-bg-color-background-color">
+   431→   431→                        <div class="modal-header pb-0">
+   432→   432→                                <button type="button" class="close" data-dismiss="modal">
+   433→   433→                                        <i aria-hidden="true" class="cps-icon cps-icon-close"></i>
+   434→   434→                                        <span class="sr-only">close search</span>
+   435→   435→                                </button>
+   436→   436→                        </div>
+   437→   437→                        <div class="modal-body">
+   438→   438→                                
+   439→   439→<form method="get" id="searchform" action="https://sites.mit.edu/student-template2/" role="search">
+   440→   440→        <label class="sr-only" for="searchform-s">Search</label>
+   441→   441→        <div class="input-group">
+   442→   442→                <input class="field form-control form-control-lg" id="searchform-s" name="s" type="text" placeholder="Search..." value="">
+   443→   443→                <span class="input-group-append">
+   444→   444→                        <button class="submit btn btn-primary btn-lg" id="searchform-submit" type="submit">
+   445→   445→                                <i aria-hidden="true" class="cps-icon cps-icon-search"></i>
+   446→   446→                                <span class="sr-only">Search Site</span>
+   447→   447→                        </button>
+   448→   448→                </span>
+   449→   449→        </div>
+   450→   450→</form>
+   451→   451→                        </div>
+   452→   452→                </div>
+   453→   453→        </div>
+   454→   454→</div><!-- #modal-search -->
+   455→   455→
+   456→   456→<script type="speculationrules">
+   457→   457→{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/student-template2/*"},{"not":{"href_matches":["/student-template2/wp-*.php","/student-template2/wp-admin/*","/student-template2/files/*","/student-template2/wp-content/*","/student-template2/wp-content/plugins/*","/student-template2/wp-content/themes/mit-flex/*","/student-template2/wp-content/themes/cpschool/*","/student-template2/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+   458→   458→</script>
+   459→   459→<script type="text/javascript" id="blog_templates_front-js-extra">
+   460→   460→/* <![CDATA[ */
+   461→   461→var blog_templates_params = {"type":"screenshot_plus"};
+   462→   462→//# sourceURL=blog_templates_front-js-extra
+   463→   463→/* ]]> */
+   464→   464→</script>
+   465→   465→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-content/plugins/blogtemplates//blogtemplatesfiles/assets/js/front.js?ver=2.6.8.2" id="blog_templates_front-js"></script>
+   466→   466→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-content/plugins/coblocks/dist/js/coblocks-animation.js?ver=3.1.17.1" id="coblocks-animation-js"></script>
+   467→   467→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-content/themes/cpschool/js/aos.js?ver=1.1582726405" id="aos-js"></script>
+   468→   468→<script type="text/javascript" id="cpschool-scripts-js-extra">
+   469→   469→/* <![CDATA[ */
+   470→   470→var cpSchoolData = {"parallaxHeader":"","animations":"1"};
+   471→   471→//# sourceURL=cpschool-scripts-js-extra
+   472→   472→/* ]]> */
+   473→   473→</script>
+   474→   474→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-content/themes/cpschool/js/theme.min.js?ver=1.1772529760" id="cpschool-scripts-js"></script>
+   475→   475→<script type="text/javascript" id="cpsc-scripts-js-extra">
+   476→   476→/* <![CDATA[ */
+   477→   477→var cpsc = {"ajax_url":"https://sites.mit.edu/student-template2/wp-admin/admin-ajax.php"};
+   478→   478→//# sourceURL=cpsc-scripts-js-extra
+   479→   479→/* ]]> */
+   480→   480→</script>
+   481→   481→<script type="text/javascript" src="https://sites.mit.edu/student-template2/wp-content/themes/mit-flex/js/theme.min.js?ver=1729080718" id="cpsc-scripts-js"></script>
+   482→   482→<script id="wp-emoji-settings" type="application/json">
+   483→   483→{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://sites.mit.edu/student-template2/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+   484→   484→</script>
+   485→   485→<script type="module">
+   486→   486→/* <![CDATA[ */
+   487→   487→/*! This file is auto-generated */
+   488→   488→const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+   489→   489→//# sourceURL=https://sites.mit.edu/student-template2/wp-includes/js/wp-emoji-loader.min.js
+   490→   490→/* ]]> */
+   491→   491→</script>
+   492→   492→
+   493→   493→</body>
+   494→   494→
+   495→   495→</html>
